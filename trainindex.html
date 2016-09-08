@@ -11,9 +11,9 @@
 <div class="container">
 
 
-	<div class="jumbotron" style="background-color: #C1C1C1; color: white">
+	<div class="jumbotron" style="background-color: #A7A7A7; color: white">
 		<h1 class="text-center">There's Always A Light At The End Of The Tunnel</h1>
-		<h3 class="text-center">Actually, I Think That's A Train</h3>
+		<h3 class="text-center">Actually, I Think It's A Train</h3>
 	</div>
 
 	<div class="row">
@@ -59,17 +59,17 @@
 
 					<div class="form-group">
 						<label for="destination">Destination</label>
-						<input type="text" class="form-control" id="destination">
+						<input type="text" class="form-control" id="destinationInput">
 					</div>
 
 					<div class="form-group">
-						<label for="firstTrain">First Train Time</label>
-						<input type="text" class="form-control" id="firstTrain">
+						<label for="firstTrain">First Train Time (HH:mm - military time)</label>
+						<input type="text" class="form-control" id="firstTrainInput">
 					</div>
 
 					<div class="form-group">
 						<label for="frequency">Frequency (min)</label>
-						<input type="text" class="form-control" id="frequency">
+						<input type="text" class="form-control" id="frequencyInput">
 					</div>
 
 					<button type="submit" class="btn btn-primary" id="addTrainButton"  style="background-color:#DF0101">Submit</button>
@@ -86,13 +86,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 <!-- Firebase -->
-<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.3.1/firebase.js"></script>
+></script>
 
 <!-- Moment.js -->
 <!-- <script src="http://momentjs.com/downloads/moment.js"></script> -->
 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 <!-- Javascript -->
-<script src="train.js"></script>
+<script src="assets/javascript/train.js"></script>
 
 </body>
 </html>
