@@ -64,6 +64,28 @@
  	console.log(trainFrequency);
 
  	//calculate the time of the next train's arrival
- 	var nextTrain = moment(firstTrain,"hh:mm").add(trainFrequency, "minutes");
- 	console.log(moment(nextTrain, "hh:mm").format("LTS"));
+
+		// First Time (pushed back 1 year to make sure it comes before current time)
+		var firstTimeConverted = moment(firstTrain,"hh:mm").subtract(1, "years");
+		console.log(firstTimeConverted);
+
+		// Current Time
+		var currentTime = moment();
+		console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+
+		// Difference between the times
+		var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
+		console.log("DIFFERENCE IN TIME: " + diffTime);
+
+		// Time apart (remainder)
+		var tRemainder = diffTime % trainFrequency;
+		console.log(tRemainder);
+
+		// Minute Until Train
+		var tMinutesTillTrain = trainFrequency - tRemainder;
+		console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+
+		// Next Train
+		var nextTrain = moment().add(tMinutesTillTrain, "minutes")
+		console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"))
   })
